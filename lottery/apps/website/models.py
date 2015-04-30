@@ -10,3 +10,6 @@ class Num3D(models.Model):
 
     def __unicode__(self):
         return u'%d %d %d' % (self.num1, self.num2, self.num3)
+
+    class Meta:
+        ordering = ['-turn']
