@@ -4,24 +4,50 @@
 
 {% block content %}
   {% block header %}
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">lottery</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">lottery</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-          </ul>
-        </div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">lottery</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">lottery</a>
       </div>
-    </nav>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+      </div>
+    </div>
+  </nav>
   {% endblock %}
   {% block main %}
+  <div class="col-md-3">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>期号</th>
+          <th>数字1</th>
+          <th>数字2</th>
+          <th>数字3</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for num in nums %}
+        <tr>
+          <td>{{ num.turn }}</td>
+          <td>{{ num.num1 }}</td>
+          <td>{{ num.num2 }}</td>
+          <td>{{ num.num3 }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+
+
+
   {% endblock %}
 {% endblock %}

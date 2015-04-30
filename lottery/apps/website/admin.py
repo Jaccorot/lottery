@@ -1,3 +1,8 @@
 from django.contrib import admin
+from lottery.apps.website.models import Num3D
 
-# Register your models here.
+
+class Num3DAdmin(admin.ModelAdmin):
+    list_display = ('turn', 'num1', 'num2', 'num3')
+
+admin.site.register(Num3D, Num3DAdmin)
