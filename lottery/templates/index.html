@@ -36,87 +36,59 @@
   {% block main %}
 
   <div class="col-md-3">
-    <table class="table table-hover">
+    <table class="table table-hover table-bordered">
       <thead>
         <tr>
-          <th>期号</th>
-          <th>数字1</th>
-          <th>数字2</th>
-          <th>数字3</th>
+          <th rowspan="2">期号</th>
+          <th rowspan="2" colspan="3">号码</th>
+          <th colspan="10">百位</th>
+          <th colspan="10">十位</th>
+          <th colspan="10">个位</th>
+        </tr>
+        <tr>
+          <th>0</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>0</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>0</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
         </tr>
       </thead>
       <tbody>
         {% for num in nums %}
         <tr>
-          <td class = 'circle'>{{ num.turn }}</td>
+          <td>{{ num.turn }}</td>
           <td>{{ num.num1 }}</td>
           <td>{{ num.num2 }}</td>
           <td>{{ num.num3 }}</td>
         </tr>
+        
         {% endfor %}
-      </tbody>
-    </table>
-  </div>
-  <div class="col-md-8 col-md-offset-1">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>百位</th>
-          <th>十位</th>
-          <th>个位</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <table class="table">
-            <tr>
-              <td>0</td>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
-            </tr>
-            </table>
-          </td>
-          <td>
-            <table class="table">
-            <tr>
-              <td>0</td>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
-            </tr>
-            </table>
-          </td>
-          <td>
-            <table class="table">
-            <tr>
-              <td>0</td>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
-            </tr>
-            </table>
-          </td>
-        </tr>
+
         <!-- {% for num in nums %}
         <tr>
           <td class = 'circle'>{{ num.turn }}</td>

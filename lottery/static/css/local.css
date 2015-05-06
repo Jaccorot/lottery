@@ -1,3 +1,7 @@
+.border_right {
+    border-right:2px solid lightGrey;
+}
+
 .chart_table_td {
     line-height: 20px;
     border: 1px solid lightGrey;
