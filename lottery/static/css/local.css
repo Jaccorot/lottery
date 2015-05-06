@@ -1,31 +1,76 @@
-.continer {
-    margin-top: 150px;
-body{
-    padding-top: 120px;
-    padding-bottom: 40px;
-    background-color: #eee;
+.chart_table_td {
+    line-height: 20px;
+    border: 1px solid lightGrey;
 }
 
-#register {
-    margin-left: 30px;
+.ball_t1 {
+    background: white url(../../../images/js/chart_table/ball/t1.png) no-repeat center center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 
-#login {
-    border: 1px solid #ccc;
-    padding: 40px 40px 20px 30px;
-    border-radius: 4px;
+.ball_t2 {
+    background: white url(../../../images/js/chart_table/ball/t2.png) no-repeat center center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 
-.form-signin {
-    max-width: 380px;
-    padding: 15px;
-    margin: 0 auto;
+.ball_t3 {
+    background: white url(../../../images/js/chart_table/ball/t3.png) no-repeat center center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 
-.form-signin h2 {
-    margin: 0 0 20px 120px;
+.ball_t4 {
+    background: white url(../../../images/js/chart_table/ball/t4.png) no-repeat center center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 
-.container-pic {
-    width: 563px;
+.ball_t5 {
+    background: white url(../../../images/js/chart_table/ball/t5.png) no-repeat center center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.ball_t6 {
+    background: white url(../../../images/js/chart_table/ball/t6.png) no-repeat center center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.ball_t7 {
+    background: white url(../../../images/js/chart_table/ball/t7.png) no-repeat center center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.ball_t8 {
+    background: white url(../../../images/js/chart_table/ball/t8.png) no-repeat center center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.ball_t9 {
+    background: white url(../../../images/js/chart_table/ball/t9.png) no-repeat center center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+
+.circle {
+height: 100px;
+width: 100px;
+background: #fff;
+border:20px solid black;
+border-radius: 100%;
 }
