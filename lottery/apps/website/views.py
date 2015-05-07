@@ -8,9 +8,7 @@ from django.template import RequestContext
 from lottery.apps.website.models import Num3D
 
 
-# Create your views here.
-
-
 def index(request):
     nums = Num3D.objects.all()
+    loop_times = [i for i in range(10)]
     return render_to_response("index.html", locals(), context_instance=RequestContext(request))

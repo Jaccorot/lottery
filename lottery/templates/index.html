@@ -35,7 +35,7 @@
   {% endblock %}
   {% block main %}
 
-  <div class="col-md-3">
+  <div class="col-md-11 ">
     <table class="table table-hover table-bordered">
       <thead>
         <tr>
@@ -85,6 +85,27 @@
           <td>{{ num.num1 }}</td>
           <td>{{ num.num2 }}</td>
           <td>{{ num.num3 }}</td>
+          {% for i in loop_times %}
+            {% ifequal num.num1 forloop.counter0 %}
+            <td class="interval">{{ num.num1 }}</td>
+            {% else %}
+            <td> </td>
+            {% endifequal %}
+          {% endfor %}
+          {% for i in loop_times %}
+            {% ifequal num.num2 forloop.counter0 %}
+            <td>{{ num.num2 }}</td>
+            {% else %}
+            <td> </td>
+            {% endifequal %}
+          {% endfor %}
+          {% for i in loop_times %}
+            {% ifequal num.num3 forloop.counter0 %}
+            <td>{{ num.num3 }}</td>
+            {% else %}
+            <td> </td>
+            {% endifequal %}
+          {% endfor %}
         </tr>
         
         {% endfor %}
