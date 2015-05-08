@@ -81,29 +81,29 @@
       <tbody>
         {% for num in nums %}
         <tr>
-          <td>{{ num.turn }}</td>
-          <td>{{ num.num1 }}</td>
-          <td>{{ num.num2 }}</td>
-          <td>{{ num.num3 }}</td>
+          <td id="turn">{{ num.turn }}</td>
+          <td id="num1">{{ num.num1 }}</td>
+          <td id="num2">{{ num.num2 }}</td>
+          <td id="num3">{{ num.num3 }}</td>
           {% for i in loop_times %}
             {% ifequal num.num1 forloop.counter0 %}
-            <td class="interval">{{ num.num1 }}</td>
+            <td class="analysis">{{ num.num1 }}</td>
             {% else %}
-            <td> </td>
+            <td  class="interval analysis"> </td>
             {% endifequal %}
           {% endfor %}
           {% for i in loop_times %}
             {% ifequal num.num2 forloop.counter0 %}
-            <td>{{ num.num2 }}</td>
+            <td class="analysis">{{ num.num2 }}</td>
             {% else %}
-            <td> </td>
+            <td  class="interval analysis"> </td>
             {% endifequal %}
           {% endfor %}
           {% for i in loop_times %}
             {% ifequal num.num3 forloop.counter0 %}
-            <td>{{ num.num3 }}</td>
+            <td class="analysis">{{ num.num3 }}</td>
             {% else %}
-            <td> </td>
+            <td  class="interval analysis"> </td>
             {% endifequal %}
           {% endfor %}
         </tr>
