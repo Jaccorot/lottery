@@ -1,9 +1,50 @@
+table>thead>tr>th,table>tbody>tr>td {
+    text-align: center;
+    white-space: nowrap;
+}
+
+
 .border_right {
     border-right:2px solid lightGrey;
 }
 
 .interval {
+    color:lightgrey;
+}
+
+.tr_th {
+    background-color: #dff3ff;
+    text-align:center;
+}
+
+
+.num3d {
+    height: 20px;
+    width: 20px;
+    background:rgb(183,30,28);
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
     
+    box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    box-align: center; 
+            
+
+    font:normal 10px/100% Arial;
+    color:white;
 }
 
 .chart_table_td {
@@ -11,74 +52,3 @@
     border: 1px solid lightGrey;
 }
 
-.ball_t1 {
-    background: white url(../../../images/js/chart_table/ball/t1.png) no-repeat center center;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.ball_t2 {
-    background: white url(../../../images/js/chart_table/ball/t2.png) no-repeat center center;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.ball_t3 {
-    background: white url(../../../images/js/chart_table/ball/t3.png) no-repeat center center;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.ball_t4 {
-    background: white url(../../../images/js/chart_table/ball/t4.png) no-repeat center center;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.ball_t5 {
-    background: white url(../../../images/js/chart_table/ball/t5.png) no-repeat center center;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.ball_t6 {
-    background: white url(../../../images/js/chart_table/ball/t6.png) no-repeat center center;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.ball_t7 {
-    background: white url(../../../images/js/chart_table/ball/t7.png) no-repeat center center;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.ball_t8 {
-    background: white url(../../../images/js/chart_table/ball/t8.png) no-repeat center center;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.ball_t9 {
-    background: white url(../../../images/js/chart_table/ball/t9.png) no-repeat center center;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-
-.circle {
-height: 100px;
-width: 100px;
-background: #fff;
-border:20px solid black;
-border-radius: 100%;
-}
