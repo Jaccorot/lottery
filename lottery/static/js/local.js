@@ -29,58 +29,31 @@ $(function(){
 	        });
             
             //增加绘图
-            
-	        var node = $(this).find('.td_canvas_100');
-	        var node_x = node.offset().left;
-			var node_y= node.offset().top + node.height() * 0.5;
-			var pre_node = node.parent().next().find('.td_canvas_100');
-			var pre_node_x = pre_node.offset().left + pre_node.width() * 0.5;
-			var pre_node_y = pre_node.offset().top + pre_node.height() * 0.5;
-			var new_node = $("<canvas></canvas>").css({"width":Math.abs(pre_node_x - node_x),"height":Math.abs(pre_node_y - node_y)}).addClass("canvas_100");
-			$('body').append(new_node);
-			var ctx = new_node.get(0).getContext('2d');
-			ctx.beginPath();
-			ctx.moveTo(node_x, node_y);
-			ctx.lineTo(pre_node_x, pre_node_y);
-			ctx.lineWidth = 1.0;
-			ctx.strokeStyle = "#000000";
-			ctx.stroke(); 
-
-			var node = $(this).find('.td_canvas_10');
-	        var node_x = node.offset().left;
-			var node_y= node.offset().top + node.height() * 0.5;
-			var pre_node = node.parent().next().find('.td_canvas_10');
-			var pre_node_x = pre_node.offset().left + pre_node.width() * 0.5;
-			var pre_node_y = pre_node.offset().top + pre_node.height() * 0.5;
-			var new_node = $("<canvas></canvas>").css({"width":Math.abs(pre_node_x - node_x),"height":Math.abs(pre_node_y - node_y)}).addClass("canvas_10");
-			$("body").append(new_node);
-			var ctx = new_node.get(0).getContext('2d');
-			ctx.beginPath();
-			ctx.moveTo(node_x, node_y);
-			ctx.lineTo(pre_node_x, pre_node_y);
-			ctx.lineWidth = 1.0;
-			ctx.strokeStyle = "#000000";
-			ctx.stroke(); 
-
-
-			var node = $(this).find('.td_canvas_1');
-	        var node_x = node.offset().left;
-			var node_y= node.offset().top + node.height() * 0.5;
-			var pre_node = node.parent().next().find('.td_canvas_1');
-			var pre_node_x = pre_node.offset().left + pre_node.width() * 0.5;
-			var pre_node_y = pre_node.offset().top + pre_node.height() * 0.5;
-			var new_node = $("<canvas></canvas>").css({"width":Math.abs(pre_node_x - node_x),"height":Math.abs(pre_node_y - node_y)}).addClass("canvas_1");
-			$('body').append(new_node);
-			var ctx = new_node.get(0).getContext('2d');
-			ctx.beginPath();
-			ctx.moveTo(node_x, node_y);
-			ctx.lineTo(pre_node_x, pre_node_y);
-			ctx.lineWidth = 1.0;
-			ctx.strokeStyle = "#000000";
-			ctx.stroke(); 
-
-			
-			
-    	}
+            draw_line(v,'td_canvas_100');
+            draw_line(v,'td_canvas_10');
+            draw_line(v,'td_canvas_1');
+       	}
 	});
 });
+//接受节点和类名称，在#canvas_draw中增加一个canvas节点，并绘图
+function draw_line(node_v, class_name) {
+	var str_class_name = "."+class_name;
+	var node = $(node_v).find(str_class_name);
+    var node_x = node.offset().left + node.outerWidth() * 0.5;
+	var node_y= node.offset().top + node.outerHeight() * 0.5;
+	var pre_node = node.parent().next().find(str_class_name);
+	var pre_node_x = pre_node.offset().left + pre_node.outerWidth() * 0.5;
+	var pre_node_y = pre_node.offset().top + pre_node.outerHeight() * 0.5;
+	var new_node = $("<canvas></canvas>").css({"width":Math.abs(pre_node_x - node_x),"height":Math.abs(pre_node_y - node_y),"position":"absolute","left":Math.min(pre_node_x,node_x),"top":node_y - $(node_v).parent().parent().offset().top}).addClass(str_class_name);
+	$('#canvas_draw').append(new_node);
+	console.log("node_x:"+node_x+" nodey:"+node_y+" pre_node_x:"+pre_node_x+"pre_node_y:"+pre_node_y)
+	console.log("node_width:"+node.outerWidth(),"node_offset_left"+node.offset().left+"height"+node.outerHeight()+"top"+node.offset().top)
+	var ctx = new_node.get(0).getContext('2d');
+	ctx.beginPath();
+	ctx.moveTo(node_x, node_y);
+	ctx.lineTo(pre_node_x, pre_node_y);
+	ctx.lineWidth = 1.0;
+	ctx.strokeStyle = "#000000";
+	ctx.stroke(); 
+
+}
