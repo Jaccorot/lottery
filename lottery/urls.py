@@ -11,4 +11,5 @@ urlpatterns = patterns(
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^index/', 'lottery.apps.website.views.index', name='index'),
+    url(r'^spider/', 'lottery.apps.website.views.catch_url', name='catch_url'),
 )
