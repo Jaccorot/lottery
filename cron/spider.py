@@ -1,4 +1,4 @@
 import urllib2
-url = 'http://127.0.0.1:8000/spider'
+url = 'http://pailie3.sinaapp.com/spider'
 content = urllib2.urlopen(url)
 print content.read()
