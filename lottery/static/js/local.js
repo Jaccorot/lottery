@@ -44,16 +44,20 @@ function draw_line(node_v, class_name) {
 	var pre_node = node.parent().next().find(str_class_name);
 	var pre_node_x = pre_node.offset().left + pre_node.outerWidth() * 0.5;
 	var pre_node_y = pre_node.offset().top + pre_node.outerHeight() * 0.5;
-	var new_node = $("<canvas></canvas>").css({"width":Math.abs(pre_node_x - node_x),"height":Math.abs(pre_node_y - node_y),"position":"absolute","left":Math.min(pre_node_x,node_x),"top":node_y - $(node_v).parent().parent().offset().top}).addClass(str_class_name);
+	var new_node = $("<canvas></canvas>").css({"width":Math.abs(pre_node_x - node_x),"height":Math.abs(pre_node_y - node_y),"position":"absolute","left":Math.min(pre_node_x,node_x),"top":node_y - $(node_v).parent().parent().offset().top}).addClass(class_name);
 	$('#canvas_draw').append(new_node);
-	console.log("node_x:"+node_x+" nodey:"+node_y+" pre_node_x:"+pre_node_x+"pre_node_y:"+pre_node_y)
-	console.log("node_width:"+node.outerWidth(),"node_offset_left"+node.offset().left+"height"+node.outerHeight()+"top"+node.offset().top)
 	var ctx = new_node.get(0).getContext('2d');
 	ctx.beginPath();
-	ctx.moveTo(node_x, node_y);
-	ctx.lineTo(pre_node_x, pre_node_y);
+/*	ctx.moveTo(0,0);
+	ctx.lineTo(45,45);*/
+	
+	ctx.moveTo((node_x >= pre_node_x ? new_node.width():0), 0);
+	ctx.lineTo((node_x < pre_node_x ? new_node.width():0), new_node.height());
 	ctx.lineWidth = 1.0;
-	ctx.strokeStyle = "#000000";
+	ctx.strokeStyle = "#CC0000";
 	ctx.stroke(); 
+
+/*	console.log("start_x:"+start_x+ " start_y:"+0+" end_x:"+end_x+" end_y:"+ Math.abs(pre_node_y - node_y)+"###");
+*/
 
 }
