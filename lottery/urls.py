@@ -10,7 +10,7 @@ urlpatterns = patterns(
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^index/', 'lottery.apps.website.views.index', name='index'),
+    url(r'^zhixuan/', 'lottery.apps.website.views.index', name='index'),
     url(r'^$', 'lottery.apps.website.views.index', name='index'),
     url(r'^spider(?P<year>\d+)/', 'lottery.apps.website.views.spider', name='spider'),
     url(r'^spider/', 'lottery.apps.website.views.spider', name='spider'),
